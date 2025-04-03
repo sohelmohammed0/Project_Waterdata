@@ -1,0 +1,35 @@
+#chatbox {
+    scrollbar-width: thin;
+    scrollbar-color: #00ff00 #1a202c;
+}
+
+.glitch {
+    position: relative;
+    animation: glitch 1s infinite;
+}
+
+@keyframes glitch {
+    0% { transform: translate(0); }
+    20% { transform: translate(-2px, 2px); }
+    40% { transform: translate(-2px, -2px); }
+    60% { transform: translate(2px, 2px); }
+    80% { transform: translate(2px, -2px); }
+    100% { transform: translate(0); }
+}
+
+/* Add a subtle neon flicker effect */
+h1.glitch::before {
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    color: #00ff00;
+    opacity: 0.8;
+    animation: flicker 2s infinite;
+}
+
+@keyframes flicker {
+    0%, 19.9%, 22%, 62.9%, 64%, 100% { opacity: 0.8; }
+    20%, 21.9%, 63% { opacity: 0.4; }
+}

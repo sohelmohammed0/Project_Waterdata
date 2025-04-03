@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARSHU'S Cyberpunk Chatbot</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body class="bg-gray-900 text-green-400 font-mono min-h-screen flex items-center justify-center p-4 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MCIgaGVpZ2h0PSI1MCI+PHJlY3Qgd2lkdGg9IjUwIiBoZWlnaHQ9IjUwIiBmaWxsPSIjMTExIj48L3JlY3Q+PGxpbmUgeDE9IjAiIHkxPSIwIiB4Mj0iNTAiIHkyPSI1MCIgc3Ryb2tlPSIjMDBmZjAwIiBzdHJva2Utd2lkdGg9IjEiIG9wYWNpdHk9IjAuMiIvPjxsaW5lIHgxPSI1MCIgeTE9IjAiIHgyPSIwIiB5Mj0iNTAiIHN0cm9rZT0iIzAwZmYwMCIgc3Ryb2tlLXdpZHRoPSIxIiBvcGFjaXR5PSIwLjIiLz48L3N2Zz4=')] bg-repeat">
+    <div class="w-full max-w-3xl bg-gray-800 border-2 border-green-500 rounded-lg shadow-[0_0_30px_rgba(0,255,0,0.7)] p-6 flex flex-col h-[85vh]">
+        <h1 class="text-4xl font-bold text-green-400 text-center mb-6 glitch" data-text="ARSHU'S Chatbot">ARSHU'S Chatbot</h1>
+        <div id="chatbox" class="flex-1 overflow-y-auto p-4 bg-gray-900 border border-green-600 rounded-lg text-green-300 mb-4 shadow-inner"></div>
+        <div class="flex space-x-2">
+            <input id="userInput" type="text" class="flex-1 p-3 bg-gray-700 border border-green-500 rounded-l-lg text-green-300 focus:outline-none focus:ring-2 focus:ring-green-500 placeholder-gray-500 transition-all duration-200 hover:bg-gray-600" placeholder="> Enter your query...">
+            <button id="sendBtn" class="bg-green-600 text-black p-3 rounded-r-lg hover:bg-green-700 transition duration-200 font-bold">Transmit</button>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
